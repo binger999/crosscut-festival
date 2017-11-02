@@ -183,10 +183,25 @@ a:hover{
   width:100%;
   background-color:#ccc;
   margin:0;
-  clear:both;
+}
+.section:after{
+    content:'';
+    float:right;
+    margin-right:5vw;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fff;
 }
 .section:nth-child(even){
     background-color:#fff;
+}
+.section:nth-child(odd):after{
+    float:left;
+    margin-right:0vw;
+    margin-left:5vw;
+    border-top: 20px solid #ccc;
 }
 .section .center{
   margin:auto;
@@ -202,9 +217,13 @@ a:hover{
   float:right;
   margin-left:1%;
 }
+
 .title{
   height:100vh;
   padding-top:50px;
+}
+.title:after{
+    border:0;
 }
 .title .center{
   background-color:#023D59;
@@ -228,6 +247,57 @@ a:hover{
         float:none;
         margin:0;
         width:100%;
+        padding:24px;
+    }
+    .section .map{
+        padding:0;
+    }
+}
+img + .caption{
+    margin-top:0px;
+    font-size:14px;
+    font-style:italic
+}
+.quad{
+    width:80%;
+    margin:auto;
+    text-align:center;
+}
+.quad img{
+    width:45%;
+    padding:2%;
+}
+.quad img:nth-of-type(1){
+    border-right:1px solid #fff;
+}
+.quad img:nth-of-type(1), .quad img:nth-of-type(2){
+    border-bottom:1px solid #fff;
+}
+.quad img:nth-of-type(3){
+    border-right:1px solid #fff;
+}
+.quad img:last-of-type{
+    padding-top: 1%;
+    width: 45%;
+}
+@media screen and (max-width:1023px){
+}
+@media screen and (max-width:890px) {
+    .quad{
+        width:100%;
+    }
+}
+@media screen and (max-width:580px) {
+    .quad img{
+        width:80%;
+        margin:auto;
+        padding:12px 0;
+        border-bottom:1px solid #fff;
+        border-right:none !important;
+    }
+    .quad img:last-of-type{
+        border-bottom:0px;
+        width:80%;
     }
 }
 </style>
@@ -271,53 +341,54 @@ a:hover{
     <div class="center">
         <h2>About Crosscut Festival</h2>
         <div class="left">
-            <img src="https://i.imgur.com/Un5ilRN.jpg">
+                <img src="https://i.imgur.com/Un5ilRN.jpg">
+                <p class="caption">caption for this image</p>
         </div>
         <div class="right">
-            <p>As Puget Sound’s population grows at breakneck
-speed, frank discussion is more important than
-ever. The Crosscut Festival brings together some
-of the boldest names in politics, business and social
-justice activism, interviewed live on stage by some
-of the finest journalists in the Pacific Northwest.
-Organized by the news outlet Crosscut and hosted
-by Seattle University, the festival will play to a
-diverse mix of civic leaders and college students
-from across the state.</p>
+            <p>As Puget Sound’s population grows at breakneck speed,
+            frank discussion is more important than ever. The Crosscut
+            Festival brings together some of the boldest names in
+            politics, business and social justice activism, interviewed
+            live on stage by some of the finest journalists in the
+            Pacific Northwest. Organized by the news outlet Crosscut
+            and hosted by Seattle University, the festival will play
+            to a diverse mix of civic leaders and college students
+            from across the state.</p>
         </div>
         <div class="clear"></div>
         <div class="left">
             <img src="https://i.imgur.com/WHRgwnI.jpg">
+            <p class="caption">caption for this image</p>
         </div>
         <div class="right">
-<p>The Crosscut Festival is a two-day event February
-2-3 that will bring together some of the best minds
-and biggest names in the Northwest and around
-the nation to tackle some of the most pressing
-issues of our times. We will be shining a spotlight
-on solutions by staging vital, provocative
-conversations. We expect 1,500 people to attend,
-including hundreds of college students and the list
-of special guest speakers will feature governors,
-mayors and other elected ofcials, as well as
-business leaders and cultural luminaries.
-The speakers at the 2018 Crosscut Festival share a
-history of leadership, reform, innovation and public
-service. When they take the stage at Seattle
-University on February 2nd they will be on camera,
-live on social media and at the center of the
-national and regional conversations on the pressing
-issues of our time. They will be in front of
-thousands of interested students and other citizens
-and will be recorded and broadcast to the world
-online and via social media.</p>
+            <p>The Crosscut Festival is a two-day event February
+            2-3 that will bring together some of the best minds
+            and biggest names in the Northwest and around
+            the nation to tackle some of the most pressing
+            issues of our times. We will be shining a spotlight
+            on solutions by staging vital, provocative
+            conversations. We expect 1,500 people to attend,
+            including hundreds of college students and the list
+            of special guest speakers will feature governors,
+            mayors and other elected ofcials, as well as
+            business leaders and cultural luminaries.
+            The speakers at the 2018 Crosscut Festival share a
+            history of leadership, reform, innovation and public
+            service. When they take the stage at Seattle
+            University on February 2nd they will be on camera,
+            live on social media and at the center of the
+            national and regional conversations on the pressing
+            issues of our time. They will be in front of
+            thousands of interested students and other citizens
+            and will be recorded and broadcast to the world
+            online and via social media.</p>
         </div>
     </div>
     <div class="clear"></div>
 </div>
 <div class="section">
-    <div class="left">
-        <div class="iframe-wrapper" style="margin:0px;width:100%;">
+    <div class="left map">
+        <div class="iframe-wrapper" style="margin:0px;width:100%;padding-bottom:60%;">
             <iframe style="top: -48px;height: 115%;" src="https://www.google.com/maps/d/u/2/embed?mid=1sNgrDUAs-nEsK8vtasVHJhfzuas"></iframe>
         </div>
     </div>
@@ -325,12 +396,25 @@ online and via social media.</p>
         <p class="header">Venue</p>
         <img style="width:225px;margin:auto;" src="/sites/default/files/styles/de2e/public/2017-10/SeattleU-red.png">
         <p>901 12th Ave, Seattle, WA 98122</p>
+        <p>Info on the three locations, where to enter that kind of stuff, if needed:</p>
+        <ul>
+            <li>building 1:</li>
+            <li>building 2:</li>
+            <li>building 3:</li>
+        </ul>
     </div>
         <div class="clear"></div>
 </div>
 <div class="section">
 <a id="sched-embed" href="http://crosscutfestival2018a.sched.com/grid/" data-sched-sidebar="no">View the Crosscut Festival schedule &amp; directory.</a>
 </div>
-
+<div class="section">
+    <div class="quad">
+    <img src="/sites/default/files/styles/de2e/public/2017-09/1500_Fest_attendees.png" style="padding-top: 4.4%;
+    padding-bottom: 4%;">
+    <img src="/sites/default/files/styles/de2e/public/2017-09/graphic1.png?itok=foD43b73"><img src="/sites/default/files/styles/de2e/public/2017-09/Businessleaders.png" style="padding-top: 5%;">
+    <img src="/sites/default/files/styles/de2e/public/2017-09/4_stages.png">
+</div>
+</div>
 <!--sched script needs to stay at bottom of page-->
 <script type="text/javascript" src="http://crosscutfestival2018a.sched.com/js/embed.js"></script>
