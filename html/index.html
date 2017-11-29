@@ -1,3 +1,43 @@
+<!--/**
+ * @license
+ * MyFonts Webfont Build ID 3487064, 2017-11-21T13:33:54-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: ProximaNova-Bold by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/bold/
+ *
+ * Webfont: ProximaNova-Regular by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular/
+ *
+ * Webfont: ProximaNova-RegularIt by Mark Simonson
+ * URL: https://www.myfonts.com/fonts/marksimonson/proxima-nova/regular-it/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3487064
+ * Licensed pageviews: 1,000,000
+ * Webfonts copyright: Copyright (c) Mark Simonson, 2005. All rights reserved.
+ *
+ * © 2017 MyFonts Inc
+*/-->
+<script>
+$(window).load(function(){
+    var protocol=document.location.protocol;"https:"!=protocol&&(protocol="http:");var count=document.createElement("script");count.type="text/javascript";count.async=!0;count.src=protocol+"//hello.myfonts.net/count/35355b";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(count,s);var browserName,browserVersion,webfontType;if("undefined"==typeof woffEnabled)var woffEnabled=!0;var svgEnabled=0,woff2Enabled=1;
+if("undefined"!=typeof customPath)var path=customPath;else{var scripts=document.getElementsByTagName("SCRIPT"),script=scripts[scripts.length-1].src;script.match("://")||"/"==script.charAt(0)||(script="./"+script);path=script.replace(/\\/g,"/").replace(/\/[^\/]*\/?$/,"")}
+var wfpath=path+"/webfonts/",browsers=[{regex:"MSIE (\\d+\\.\\d+)",versionRegex:"new Number(RegExp.$1)",type:[{version:9,type:"woff"},{version:5,type:"eot"}]},{regex:"Trident/(\\d+\\.\\d+); (.+)?rv:(\\d+\\.\\d+)",versionRegex:"new Number(RegExp.$3)",type:[{version:11,type:"woff"}]},{regex:"Firefox[/s](\\d+\\.\\d+)",versionRegex:"new Number(RegExp.$1)",type:[{version:3.6,type:"woff"},{version:3.5,type:"ttf"}]},{regex:"Edge/(\\d+\\.\\d+)",versionRegex:"new Number(RegExp.$1)",type:[{version:12,type:"woff"}]},
+{regex:"Chrome/(\\d+\\.\\d+)",versionRegex:"new Number(RegExp.$1)",type:[{version:36,type:"woff2"},{version:6,type:"woff"},{version:4,type:"ttf"}]},{regex:"Mozilla.*Android (\\d+\\.\\d+).*AppleWebKit.*Safari",versionRegex:"new Number(RegExp.$1)",type:[{version:4.1,type:"woff"},{version:3.1,type:"svg#wf"},{version:2.2,type:"ttf"}]},{regex:"Mozilla.*(iPhone|iPad).* OS (\\d+)_(\\d+).* AppleWebKit.*Safari",versionRegex:"new Number(RegExp.$2) + (new Number(RegExp.$3) / 10)",unhinted:!0,type:[{version:5,
+type:"woff"},{version:4.2,type:"ttf"},{version:1,type:"svg#wf"}]},{regex:"Mozilla.*(iPhone|iPad|BlackBerry).*AppleWebKit.*Safari",versionRegex:"1.0",type:[{version:1,type:"svg#wf"}]},{regex:"Version/(\\d+\\.\\d+)(\\.\\d+)? Safari/(\\d+\\.\\d+)",versionRegex:"new Number(RegExp.$1)",type:[{version:5.1,type:"woff"},{version:3.1,type:"ttf"}]},{regex:"Opera/(\\d+\\.\\d+)(.+)Version/(\\d+\\.\\d+)(\\.\\d+)?",versionRegex:"new Number(RegExp.$3)",type:[{version:24,type:"woff2"},{version:11.1,type:"woff"},
+{version:10.1,type:"ttf"}]}],browLen=browsers.length,suffix="",i=0;
+a:for(;i<browLen;i++){var regex=new RegExp(browsers[i].regex);if(regex.test(navigator.userAgent)){browserVersion=eval(browsers[i].versionRegex);var typeLen=browsers[i].type.length;for(j=0;j<typeLen;j++)if(browserVersion>=browsers[i].type[j].version&&(1==browsers[i].unhinted&&(suffix="_unhinted"),webfontType=browsers[i].type[j].type,"woff"!=webfontType||woffEnabled)&&("woff2"!=webfontType||woff2Enabled)&&("svg#wf"!=webfontType||svgEnabled))break a}else webfontType="woff"}
+/(Macintosh|Android)/.test(navigator.userAgent)&&"svg#wf"!=webfontType&&(suffix="_unhinted");var head=document.getElementsByTagName("head")[0],stylesheet=document.createElement("style");stylesheet.setAttribute("type","text/css");head.appendChild(stylesheet);
+for(var fonts=[{fontFamily:"ProximaNova-Bold",url:wfpath+"35355B_0"+suffix+"_0."+webfontType},{fontFamily:"ProximaNova-Regular",url:wfpath+"35355B_1"+suffix+"_0."+webfontType},{fontFamily:"ProximaNova-RegularIt",url:wfpath+"35355B_2"+suffix+"_0."+webfontType}],len=fonts.length,css="",i=0;i<len;i++){var format="svg#wf"==webfontType?'format("svg")':"ttf"==webfontType?'format("truetype")':"eot"==webfontType?"":'format("'+webfontType+'")',css=css+("@font-face{font-family: "+fonts[i].fontFamily+";src:url("+
+fonts[i].url+")"+format+";");fonts[i].fontWeight&&(css+="font-weight: "+fonts[i].fontWeight+";");fonts[i].fontStyle&&(css+="font-style: "+fonts[i].fontStyle+";");css+="}"}stylesheet.styleSheet?stylesheet.styleSheet.cssText=css:stylesheet.innerHTML=css;
+})
+</script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
@@ -8,17 +48,88 @@ $(document).ready(function(){
   $('.hamburger').click(function(){
     $('.nav .links').fadeToggle();
   })
+  $("#contact-form").load("/contact/festival_contact #contact-message-festival-contact-form");
+  $('.faq .question').click(function(){
+      console.log('click')
+      $(this).siblings('.answer').slideToggle();
+  })
+  var speakers = $('.speaker')
+  var speakerWidth = speakers.length*174;
+  $('.speaker-scroll').css('width',speakerWidth);
+  $('.speaker-left').click(function(){
+      var left = parseInt($('.speaker-scroll').css('left'))
+      if (left>=-751){
+        $('.speaker-scroll').animate({left: "-=500"});
+      }
+  })
+    $('.speaker-right').click(function(){
+        var left = parseInt($('.speaker-scroll').css('left'))
+        if (left<=-1){
+            $('.speaker-scroll').animate({left: "+=500"});
+        }
+  })
+    $('.map-wrapper').click(function(){
+      $('.map-wrapper iframe').css('pointer-events','auto')
+    });
+    $('.map-wrapper').mouseleave(function(){
+          $('.map-wrapper iframe').css('pointer-events','none')
+      });
+
+  $('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        console.log(target.offset().top)
+        $('html, body').animate({scrollTop: target.offset().top-52}, 1000
+        /*, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        }*/
+        );
+      }
+    }
+  });
 })
 </script>
 <style>
-#toolbar-administration{
+#toolbar-administration, .footer-wrapper{
     display:none;
+}
+#block-contactformcss{
+    height:0px;
+}
+#hide{
+    display:none;
+}
+.row, .col-sm-12{
+    padding:0;
+    margin:0;
+}
+.user-logged-in #hide{
+    display:block;
 }
 body, .main-container{
   width:100%;
   padding:0px;
   margin:0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 .navbar{
     display:none;
@@ -27,28 +138,29 @@ body, .main-container{
     display:none;
 }
 p:last-child{
-    margin-bottom:12px;
+    margin-bottom:24px;
 }
 p{
-  font-size:16px;
-  margin-bottom:12px;
-  line-height:24px;
-  font-family: 'Open Sans', sans-serif;
+  font-size:18px;
+  margin-bottom:24px;
+  line-height:26px;
+  font-family: 'Proxima Nova', sans-serif;
 }
 h1, h2, h3, h4{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
   color:#023C59;
   font-weight:bold;
-  margin:16px 0;
+  margin:24px 0;
+  text-align:center;
 }
 h1{
-  font-size:36px;
+  font-size:38px;
 }
 h2{
-  font-size:28px;
+  font-size:30px;
 }
 h3{
-  font-size:24px;
+  font-size:26px;
 }
 h4{
   font-weight:bold;
@@ -60,12 +172,13 @@ h4{
     margin-bottom:6px;
 }
 a{
-  color:blue;
+  color:#327CB1;
   text-decoration:none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proxima Nova', sans-serif;
 }
 a:hover{
   text-decoration:underline;
+  cursor:pointer;
 }
 .clear{
     clear:both;
@@ -79,6 +192,9 @@ a:hover{
     width:80%;
     margin:auto;
 }
+.map-wrapper iframe{
+    pointer-events:none;
+}
 .iframe-wrapper iframe{
     position: absolute;
     top:0;
@@ -86,7 +202,13 @@ a:hover{
     width: 100%;
     height: 100%;
 }
-@media screen and (max-width:890px){
+@media screen and (min-width:1540px){
+    .iframe-wrapper{
+        width:60%;
+        padding-bottom: 31.56%;
+    }
+}
+@media screen and (max-width:927px){
     .iframe-wrapper{
         width:100%;
         padding-bottom: 56.25%;
@@ -107,10 +229,12 @@ a:hover{
 .nav .logo{
   float:left;
   width:340px;
+  cursor:pointer;
 }
 .nav .links{
-  float:right;
+    float:right;
     margin-top: 13px;
+    margin-right:6px;
 }
 .nav .links ul{
   list-style:none;
@@ -118,6 +242,7 @@ a:hover{
 }
 .nav .links li{
   float:left;
+  cursor:pointer;
 }
 .nav .links li a{
   color:#fff;
@@ -147,16 +272,29 @@ a:hover{
   background-color: #288BCB;
   color:#fff;
 }
+.btn-register{
+    padding:6px 12px;
+    background-color: #F2C245;
+    color:#023D59;
+    font-weight:bold;
+    border-radius:0;
+    font-size:24px;
+    width:60%;
+}
+.btn-register:hover{
+    background-color: #288BCB;
+    color:#fff;
+}
 .nav .hamburger{
   display:none;
   width:46px;
   float:right;
   margin:8px 6px;
 }
-@media screen and (max-width:1023px){
+@media screen and (max-width:1230px){
 
 }
-@media screen and (max-width:890px){
+@media screen and (max-width:927px){
   .nav .hamburger{
     display:block;
   }
@@ -166,6 +304,8 @@ a:hover{
     text-align:center;
     background-color:#203342;
     clear:both;
+    margin-top:0;
+    margin-right:0;
   }
   .nav .links li{
     float:none;
@@ -177,31 +317,47 @@ a:hover{
   }
 }
 @media screen and (max-width:580px) {
-
+    .nav .logo{
+        margin-top:3%;
+        width:225px;
+    }
+    .btn-register{
+        width:80%;
+    }
 }
 .section{
   width:100%;
-  background-color:#ccc;
+  background-color:#fff;
   margin:0;
 }
-.section:after{
+.section:last-of-type{
+    padding-bottom:36px;
+}
+.arrow-right:after{
     content:'';
     float:right;
     margin-right:5vw;
     width: 0;
     height: 0;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-    border-top: 20px solid #fff;
+    border-left: 35px solid transparent;
+    border-right: 0px solid transparent;
+    border-top: 25px solid #fff;
 }
-.section:nth-child(even){
-    background-color:#fff;
-}
-.section:nth-child(odd):after{
+.arrow-left:after{
+    content:'';
     float:left;
-    margin-right:0vw;
     margin-left:5vw;
-    border-top: 20px solid #ccc;
+    width: 0;
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 35px solid transparent;
+    border-top: 25px solid #fff;
+}
+.gray{
+    background-color:#ccc;
+}
+.blue{
+    background-color:#033C58;
 }
 .section .center{
   margin:auto;
@@ -219,44 +375,223 @@ a:hover{
 }
 
 .title{
-  height:100vh;
+  height:90vh;
   padding-top:50px;
+  background-image:url('/sites/default/files/styles/de2e/public/2017-11/HeaderBanner.jpg?itok=xXKlwC4h');
 }
 .title:after{
     border:0;
 }
 .title .center{
   background-color:#023D59;
-  margin:18vh auto 14vh;
+  margin:10vh auto 14vh;
   padding:24px 24px 60px 24px;
 }
-@media screen and (max-width:1023px){
-  .section .center{
-    width:65%;
-  }
+.title .info{
+    margin:auto;
+    width:525px;
 }
-@media screen and (max-width:890px) {
+.bubbles{
+    /*height:40vh;*/
+  background-image:url('/sites/default/files/styles/de2e/public/2017-11/speechbubbles_bottom%402x.png');
+}
+.parallax{
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section .map{
+    width:70%;
+}
+.section .venue{
+    width:25%;
+    margin-right:3%;
+}
+@media screen and (min-width:1540px){
+    .section .center{
+        width:50%;
+    }
+}
+@media screen and (max-width:1270px){
+    .title .center{
+        margin-top:18vh;
+    }
+    .section .center{
+        width:65%;
+    }
+}
+@media screen and (max-width:927px) {
     .title .center{
         margin-top:15vh;
         padding:24px 6px;
     }
     .section .center{
-        width:100%;
+        width:90%;
     }
     .section .left, .section .right{
         float:none;
         margin:0;
         width:100%;
-        padding:24px;
+        padding:12px;
+    }
+    .section .left img, .section .right img{
+        width:100%;
     }
     .section .map{
         padding:0;
+        width:100%;
+        margin-top:25px;
+    }
+    .section .venue{
+        width:300px;
+        margin:auto;
+    }
+}
+@media screen and (max-width:580px) {
+    .title .center{
+        margin-left:0px;
+        margin-right:0px;
+        width:100%;
+    }
+    .section .venue{
+        padding-top:0;
+    }
+    .title .info{
+        width:255px;
+    }
+    .title .info img{
+        margin-top:6px;
+    }
+    .title .info .at{
+        display:none;
+    }
+}
+.section .prices{
+    margin-bottom:24px;
+}
+.section .prices td{
+    font-size:16px;
+    border-left:1px solid #000;
+    text-align:center;
+    padding:12px;
+    width:20%;
+}
+.section .prices tr:nth-child(even){
+    background-color:#E9F6FD;
+}
+.section .prices tr:first-of-type td{
+    text-align:left;
+}
+.section .prices td:first-of-type{
+    border-left:0;
+    text-align:left;
+    width:30%;
+}
+.section .mob-pricing{
+    display:none;
+}
+.section .mob-pricing ul li{
+    font-size:18px;
+}
+.section .speaker-row {
+    /*overflow:hidden;
+    height:270px;
+    width:70vw;
+    float:left;*/
+}
+.section .speaker-left{
+    height:270px;
+    float:left;
+    margin-left:13vw
+}
+.section .speaker-right{
+    height:270px;
+    float:right;
+    margin-right:13vw;
+}
+.section .speaker-row .speaker-scroll{
+    position:relative;
+}
+.section .speaker-row  .speaker{
+    float:left;
+    width:23%;
+    margin:1%;
+    text-align:center
+}
+.section .speaker-row .speaker img{
+    width:100%;
+    border-radius:150px;
+}
+.section .speaker-row .speaker .name{
+    margin-bottom:0px;
+}
+.section .speaker-row .speaker .role{
+    color:#666;
+    font-style:italic;
+}
+.section .track{
+    width:33%;
+    height:45vh;
+    margin:0;
+    float:left;
+    text-align:left;
+}
+.section .track .name{
+    height:50px;
+}
+.section .track p{
+    margin:12px;
+}
+.section .track h3{
+    margin-top:0px;
+    padding:12px;
+    text-align:left;
+}
+@media screen and (max-width: 1270px){
+    /*.section .speaker-row {
+        width:750px;
+    }*/
+    .section .track .name{
+        height:75px;
+    }
+    .section .track{
+        height:54vh;
+    }
+}
+@media screen and (max-width:927px) {
+
+}
+@media screen and (max-width:580px) {
+    .section .speaker-row {
+        width:70%;
+    }
+    .section .speaker-row  .speaker{
+        width:44%;
+        margin:3%;
+    }
+    .section .track .name{
+        height:50px;
+    }
+    .section .track{
+        height: 100%;
+        width: 100%;
+        float:none;
+    }
+    .section .prices{
+        display:none;
+    }
+    .section .mob-pricing{
+        display:block;
     }
 }
 img + .caption{
     margin-top:0px;
     font-size:14px;
     font-style:italic
+}
+.quad-wrapper{
+    background-image:url('/sites/default/files/styles/d12/public/2017-11/DiamondGrid.jpg');
 }
 .quad{
     width:80%;
@@ -267,7 +602,7 @@ img + .caption{
     width:45%;
     padding:2%;
 }
-.quad img:nth-of-type(1){
+/*.quad img:nth-of-type(1){
     border-right:1px solid #fff;
 }
 .quad img:nth-of-type(1), .quad img:nth-of-type(2){
@@ -275,14 +610,14 @@ img + .caption{
 }
 .quad img:nth-of-type(3){
     border-right:1px solid #fff;
-}
+}*/
 .quad img:last-of-type{
     padding-top: 1%;
     width: 45%;
 }
-@media screen and (max-width:1023px){
+@media screen and (max-width:1270px){
 }
-@media screen and (max-width:890px) {
+@media screen and (max-width:927px) {
     .quad{
         width:100%;
     }
@@ -292,57 +627,194 @@ img + .caption{
         width:80%;
         margin:auto;
         padding:12px 0;
-        border-bottom:1px solid #fff;
-        border-right:none !important;
+        /*border-bottom:1px solid #fff;
+        border-right:none !important;*/
     }
     .quad img:last-of-type{
-        border-bottom:0px;
+        /*border-bottom:0px;*/
         width:80%;
     }
+}
+.sponsor-wrapper h2{
+    margin:24px auto 0;
+    width:60%;
+    text-align:center;
+}
+.sponsor-wrapper{
+        width:100%;
+        background-color:#fff;
+        padding-bottom:24px;
+}
+.sponsors{
+    background-color:#fff;
+    width:80%;
+    padding:24px;
+    margin:auto;
+}
+.sponsors img{
+}
+.sponsors center{
+    clear:both;
+}
+.sponsors div{
+    margin:12px auto;
+    clear:both;
+}
+.sponsors div img{
+    float:left;
+    margin:2%;
+}
+.sponsors .first-row{
+    width:50%;
+}
+.sponsors .first-row img{
+    width:93%;
+}
+.sponsors .second-row{
+    width:50%;
+}
+.sponsors .second-row img{
+    width:93%;
+}
+.sponsors .third-row{
+    width:66%;
+}
+.sponsors .third-row img{
+    width:29%;
+}
+.sponsors .fourth-row{
+    width:60%;
+}
+.sponsors .fourth-row img{
+    width:29%;
+}
+.sponsors .fifth-row{
+    width:76%;
+}
+.sponsors .fifth-row img{
+    width:15%;
+}
+@media screen and (max-width:927px) {
+    .sponsors{
+        width:100%;
+    }
+    .sponsors .first-row{
+        width:60%;
+    }
+    .sponsors .second-row{
+        width:60%;
+    }
+    .sponsors .third-row{
+        width:76%;
+    }
+    .sponsors .fourth-row{
+        width:70%;
+    }
+    .sponsors .fifth-row{
+        width:86%;
+    }
+}
+@media screen and (max-width:580px) {
+    .sponsors{
+        width:100%;
+        margin:24px auto;
+    }
+    .sponsors .first-row, .sponsors .second-row, .sponsors .fourth-row{
+        width:100%;
+    }
+    .sponsors .first-row img{
+        width:90%;
+    }
+    .sponsors .second-row img{
+        width:90%;
+    }
+    .sponsors .third-row{
+        width:100%
+    }
+    .sponsors .third-row img{
+        width:29%;
+    }
+    .sponsors .fourth-row img{
+        width:29%;
+    }
+    .sponsors .fifth-row{
+        width:85%;
+    }
+    .sponsors .fifth-row img{
+        width:29%;
+    }
+}
+.faq{
+    border-radius:8px;
+    background-color:#fff;
+    margin:12px;
+    text-align:left;
+}
+.faq .question{
+    width:100%;
+    background-color:#fff;
+    padding:12px 24px;
+    text-align:left;
+}
+.faq .question:focus, .faq .question:active{
+    border:0;
+    outline:none;
+}
+.faq .answer{
+    border-radius:0 0 8px 8px;
+    display:none;
+    width:100%;
+    border-top:1px solid #1F8EC0;
+    background-color:#fff;
+    padding:12px 24px;
 }
 </style>
 <div id="hide" style="position:fixed;top:75px;left:0;width:85px;background-color:red;color:white;">
     <p>Hide/show drupal admin bar</p>
 </div>
 <div class="nav">
-  <a href="#" class="logo"><img style="width:100%;" src="/sites/default/files/styles/de2e/public/2017-11/logo-invision.png"></a>
+  <a href="#top" class="logo"><img style="width:100%;" src="/sites/default/files/styles/de2e/public/2017-11/logo-invision.png"></a>
   <img src="https://www.99games.in/resources/images/icons/icon-hamburger-light.svg" class="hamburger">
   <div class="links">
     <ul>
-      <li class="register"><a href="#">Register Now!</a></li>
-      <li><a href="#">Link 1</a></li>
-      <li><a href="#">Link 2</a></li>
-      <li><a href="#">Link 3</a></li>
-      <li><a href="#">Link 4</a></li>
-      <li><a href="#">Link 5</a></li>
+      <li class="register"><a href="https://www.eventbrite.com/e/crosscut-festival-tickets-37104119420?aff=Microsite">Register Now!</a></li>
+      <li><a href="#about">About</a></li>
+        <li><a href="#lineup">Lineup</a></li>
+      <li><a href="#location">Location</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+
+      <!--<li><a href="#faq">FAQ</a></li>-->
     </ul>
   </div>
 </div>
-<div class="section title">
+<div class="section title parallax" id="top">
   <div class="center">
-    <img style="width:100%;" src="/sites/default/files/styles/de2e/public/2017-09/Crosscut_Fest_logo_white.jpg">
-    <div style="margin:auto;width:515px;">
-      <span style="color:#fff;float:left;font-size:36px;margin-top:15px;"><strong>Feb. 2-3, 2018&nbsp;@</strong></span>
-      <img style="float:left;width:225px;margin-left:10px;"src="/sites/default/files/styles/de2e/public/2017-10/SeattleU-red.png">
+    <img style="width:100%;" src="/sites/default/files/styles/de2e/public/2017-09/Crosscut_Fest_logo_white.jpg?itok=hxw4ByTm">
+    <div class="info">
+      <span style="color:#fff;float:left;font-size:36px;margin-top:15px;"><strong>Feb. 2&ndash;3, 2018&nbsp;<span class="at">@</span></strong></span>
+      <img style="float:left;width:225px;margin-left:10px;margin-top:15px;"src="/sites/default/files/styles/de2e/public/2017-11/SeattleULogo_white.png">
         <div class="clear"></div>
     </div>
   </div>
+  </div>
+<div class="section">
   <center style="background-color:#053B5B;">
-      <span style="font-size:48px;color:#00CFDE">It's time to </span>
+      <span style="font-size:48px;color:#00CFDE">It&rsquo;s time to </span>
       <span style="font-size:48px;font-weight:bold;color:#F2C245;">talk it out.</span>
     <div class="clear"></div>
   </center>
     <div class="clear"></div>
 </div>
-<div class="section">
+
+<div class="section arrow-right" id="about" style="margin-top:24px;">
     <div class="iframe-wrapper">
-        <iframe src="https://player.vimeo.com/video/240064400" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TJy5IT94PiM?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="center">
         <h2>About Crosscut Festival</h2>
         <div class="left">
-                <img src="https://i.imgur.com/Un5ilRN.jpg">
-                <p class="caption">caption for this image</p>
+                <img src="/sites/default/files/styles/de2e/public/2017-11/SU_auditorium.jpg">
+                <p class="caption">PACCAR Atrium in the Pigott Building</p>
         </div>
         <div class="right">
             <p>As Puget Sound’s population grows at breakneck speed,
@@ -357,64 +829,289 @@ img + .caption{
         </div>
         <div class="clear"></div>
         <div class="left">
-            <img src="https://i.imgur.com/WHRgwnI.jpg">
-            <p class="caption">caption for this image</p>
+            <img src="/sites/default/files/styles/de2e/public/2017-11/SU_studentcenter.jpg">
+            <p class="caption">Pigott Building</p>
         </div>
         <div class="right">
-            <p>The Crosscut Festival is a two-day event February
-            2-3 that will bring together some of the best minds
+            <p>The Crosscut Festival is a one-evening and one-day event &ndash; February
+            2nd and 3rd &ndash; that will bring together some of the best minds
             and biggest names in the Northwest and around
             the nation to tackle some of the most pressing
             issues of our times. We will be shining a spotlight
             on solutions by staging vital, provocative
             conversations. We expect 1,500 people to attend,
-            including hundreds of college students and the list
+            including hundreds of college students. The list
             of special guest speakers will feature governors,
-            mayors and other elected ofcials, as well as
-            business leaders and cultural luminaries.
-            The speakers at the 2018 Crosscut Festival share a
+            mayors and other elected officials, as well as
+            business leaders and cultural luminaries.</p>
+            <p>The speakers at the 2018 Crosscut Festival share a
             history of leadership, reform, innovation and public
             service. When they take the stage at Seattle
             University on February 2nd they will be on camera,
             live on social media and at the center of the
             national and regional conversations on the pressing
-            issues of our time. They will be in front of
-            thousands of interested students and other citizens
-            and will be recorded and broadcast to the world
-            online and via social media.</p>
+            issues of our time. They will be in front of hundreds of interested students and other citizens, and the keynote track will be recorded and broadcast to the world online and via social media.</p>
         </div>
     </div>
-    <div class="clear"></div>
+    <div class="clear" style="height:24px;"></div>
 </div>
-<div class="section">
+
+<div class="section quad-wrapper blue arrow-left">
+    <div class="quad">
+    <img src="/sites/default/files/styles/de2e/public/2017-09/1500_Fest_attendees.png" style="padding-top: 4.4%;padding-bottom: 4%;">
+    <img src="/sites/default/files/styles/de2e/public/2017-09/graphic1.png?itok=foD43b73"><img src="/sites/default/files/styles/de2e/public/2017-09/Businessleaders.png" style="padding-top: 5%;">
+    <img src="/sites/default/files/styles/de2e/public/2017-09/4_stages.png">
+    </div>
+</div>
+<div class="section arrow-right" id="lineup">
+    <!--
+    <div class="speaker-left"><img src="/sites/default/files/styles/de2e/public/2017-11/left.jpg"></div>
+    <div class="speaker-right"><img src="/sites/default/files/styles/de2e/public/2017-11/right_0.jpg"></div>
+    -->
+    <div class="center">
+        <h2>Lineup</h2>
+    </div>
+    <div class="center speaker-row">
+        <h3>Featured Speakers:</h3>
+        <!--<div class="speaker-scroll">-->
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/JayInslee.jpg">
+                <p class="name">Jay Inslee</p>
+                <p class="role">WA State Governor</p>
+            </div>
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/BobFerguson.jpg">
+                <p class="name">Bob Ferguson</p>
+                <p class="role">WA State Attorney General</p>
+            </div>
+            <!--
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/PramilaJayapal.jpg">
+                <p class="name">Pramila Jayapal</p>
+                <p class="role">WA State Representative</p>
+            </div>-->
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/SallyJewell.jpg">
+                <p class="name">Sally Jewell</p>
+                <p class="role">Former Secretary of the Interior</p></p>
+            </div>
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/DelrishMoss.jpg">
+                <p class="name">Delrish Moss</p>
+                <p class="role">Police Chief of Ferguson Police Department</p></p>
+            </div>
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/DavidLitt.jpg">
+                <p class="name">David Litt</p>
+                <p class="role">Speechwriter to President Barack Obama</p></p>
+            </div>
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/JulianCastro.jpg">
+                <p class="name">Julian Castro</p>
+                <p class="role">Former Secretary of Housing and Urban Development</p>
+            </div>
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/VanessaGrigoriadis.jpg">
+                <p class="name">Vanessa Grigoriadis</p>
+                <p class="role">Journalist</p>
+            </div>
+            <div class="speaker">
+                <img src="/sites/default/files/styles/de2e/public/2017-11/ZoeQuinn.jpg">
+                <p class="name">Zoe Quinn</p>
+                <p class="role">Video Game Developer</p>
+            </div>
+        <!--</div>-->
+    </div>
+    <div class="clear"></div>
+    <div class="tracks center">
+        <h3>Tracks:</h3>
+        <div class="track rsj" style="background-color:rgba(41,138,202,.2)">
+            <div class="name" style="background-color:rgb(41,138,202);"><h3>Race & Social Justice</h3></div>
+                <p>Immigration policy in the time of Trump</p>
+                <p>When cops use deadly force</p>
+                <p>Exploring the reparations landscape</p>
+                <p>Athletes as activists</p>
+                <p>The hidden impacts of gentrification</p>
+                <p>Urban density: Panacea or plague?</p>
+                <div class="clear"></div>
+
+        </div>
+        <div class="track politics" style="background-color:rgba(60,193,209,.2)">
+            <div class="name" style="background-color:rgb(60,193,209);"><h3>Politics</h3></div>
+                <p>When free speech meets hate speech</p>
+                <p>Trump and the Resistance</p>
+                <p>The new War on Drugs</p>
+                <p>The GOP is dead. Long live the GOP!</p>
+                <p>Across the urban-rural divide</p>
+                <p>We disagree, and that’s OK</p>
+                <div class="clear"></div>
+        </div>
+        <div class="track business" style="background-color:rgba(243,192,67,.2)">
+            <div class="name" style="background-color:rgb(243,192,67);"><h3>Business</h3></div>
+                <p>Seattle’s love-hate relationship w/ Amazon</p>
+                <p>Businesses that take a stand</p>
+                <p>Tax breaks for titans</p>
+                <p>Unions and the gig economy</p>
+                <p>Business challenges in a warming world</p>
+                <p>Gamergate and the state of women in tech</p>
+               <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear" style="height:24px;"></div>
+    <!--
+<a id="sched-embed" href="http://crosscutfestival2018a.sched.com/grid/" data-sched-sidebar="no">View the Crosscut Festival schedule &amp; directory.</a>-->
+</div>
+
+
+<div class="section location gray" id="location">
     <div class="left map">
-        <div class="iframe-wrapper" style="margin:0px;width:100%;padding-bottom:60%;">
+        <div class="iframe-wrapper map-wrapper" style="margin:0px;width:100%;padding-bottom:40%;">
             <iframe style="top: -48px;height: 115%;" src="https://www.google.com/maps/d/u/2/embed?mid=1sNgrDUAs-nEsK8vtasVHJhfzuas"></iframe>
         </div>
     </div>
-    <div class="right" style=padding-top:36px;>
+    <div class="right venue">
         <p class="header">Venue</p>
-        <img style="width:225px;margin:auto;" src="/sites/default/files/styles/de2e/public/2017-10/SeattleU-red.png">
-        <p>901 12th Ave, Seattle, WA 98122</p>
-        <p>Info on the three locations, where to enter that kind of stuff, if needed:</p>
-        <ul>
-            <li>building 1:</li>
-            <li>building 2:</li>
-            <li>building 3:</li>
-        </ul>
+        <a href="https://www.seattleu.edu/" target="_blank"><img src="/sites/default/files/styles/de2e/public/2017-10/SeattleU-red.png"></a>
+        <p><a href="https://www.google.com/maps?q=901+12th+Ave,+Seattle,+WA+98122&rlz=1C5CHFA_enUS752US752&um=1&ie=UTF-8&sa=X&ved=0ahUKEwjOzujNrLLXAhXIrlQKHYypDuoQ_AUICigB" target="_blank">901 12th Ave, Seattle, WA 98122</a></p>
     </div>
         <div class="clear"></div>
 </div>
-<div class="section">
-<a id="sched-embed" href="http://crosscutfestival2018a.sched.com/grid/" data-sched-sidebar="no">View the Crosscut Festival schedule &amp; directory.</a>
+
+<div class="section arrow-right" id="pricing">
+    <div class="center">
+        <h2>Pricing Options</h2>
+        <table class="prices">
+            <tr>
+                <td></td>
+                <td style="vertical-align:top"><strong>Friday & Saturday Combo Ticket: $95</strong><br/><em>Price will rise to $125 after January 20, 2018.</em></td>
+                <td style="vertical-align:top"><strong>Saturday Only Ticket: $75</strong><br/><em>Price will rise to $100 after January 20, 2018.</em></td>
+                <td style="vertical-align:top"><strong>Student Tickets: $15</strong></td>
+            </tr>
+            <!--<tr>
+                <td><strong>Friday Night Reception</strong><br/>Includes complimentary appetizers and a cash bar</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td></td>
+            </tr>-->
+            <tr>
+                <td><strong>The Governor on Climate Change</strong><br/>Featuring Jay Inslee (WA) in a discussion on climate change</td>
+                <td>&#10004;</td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><strong>All Saturday festival tracks, sessions and panels</strong></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><strong>Crosscut Festival afterparty</strong><br/>At Optimism Brewing Company</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><strong>Networking with journalists and members of the media</strong></td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+                <td>&#10004;</td>
+            </tr>
+            <tr>
+                <td><strong>Student Lounge access</strong></td>
+                <td></td>
+                <td></td>
+                <td>&#10004;</td>
+            </tr>
+        </table>
+        <div class="mob-pricing">
+            <h4 style="margin-bottom:6px;">Friday/Saturday Combo Ticket: $95 (limited quantities)</h4>
+            <p style="text-align:center;"><em>Prices will rise to $125 after January 20th, 2018.</em></p>
+            <ul>
+                <li>Access to the Friday night Governor's Panel featuring Jay Inslee (WA) in discussion on climate change</li>
+                <li>Access to all Saturday festival tracks, sessions and panels</li>
+                <li>An invitation to the Crosscut Festival afterparty</li>
+                <li>The opportunity to interact and network with journalists and members of the media</li>
+            </ul>
+            <h4 style="margin-bottom:6px;">Saturday Only Ticket: $75</h4>
+            <p style="text-align:center;"><em>Prices will rise to $100 after January 20th, 2018.</em></p>
+            <ul>
+                <li>Access to all Saturday festival tracks, sessions and panels</li>
+                <li>An invitation to the Crosscut Festival afterparty</li>
+                <li>The opportunity to interact and network with journalists and members of the media </li>
+            </ul>
+            <h4>Student Tickets: $15</h4>
+            <ul>
+                <li>Access to the Friday night panel and all Saturday events and sessions</li>
+                <li>Access to the Student Lounge</li>
+                <li>The opportunity to interact and network with speakers, journalists and members of the media</li>
+            </ul>
+        </div>
+        <p style="background-color:#248DC5;padding:12px;color:#fff;">We also offer the opportunity to sponsor a student! Your $15 donation will help us keep prices low for all currently enrolled students!</p>
+        <center><a href="https://www.eventbrite.com/e/crosscut-festival-tickets-37104119420?aff=Microsite" class="btn btn-register">Get Your Tickets!</a></center>
+    </div>
+    <div class="clear" style="height:24px;"></div>
 </div>
-<div class="section">
-    <div class="quad">
-    <img src="/sites/default/files/styles/de2e/public/2017-09/1500_Fest_attendees.png" style="padding-top: 4.4%;
-    padding-bottom: 4%;">
-    <img src="/sites/default/files/styles/de2e/public/2017-09/graphic1.png?itok=foD43b73"><img src="/sites/default/files/styles/de2e/public/2017-09/Businessleaders.png" style="padding-top: 5%;">
-    <img src="/sites/default/files/styles/de2e/public/2017-09/4_stages.png">
+
+<div class="section blue">
+    <img style="width:100%;" src="http://festival.crosscut.com/sites/default/files/styles/d12/public/2017-11/SpeechBubbleBanner.jpg">
+    <!--<img style="width:100%;" src='/sites/default/files/styles/de2e/public/2017-11/speechbubbles_top.png'>-->
 </div>
+<!--
+<div class="section gray" id="faq" style="padding-top:1px;">
+    <div class="center">
+        <h2>FAQ</h2>
+        <div class="faq">
+            <button class="btn question dropdown-toggle">Question 1</button>
+            <div class="answer"><p>Answer 1</p></div>
+        </div>
+         <div class="faq">
+            <button class="btn question dropdown-toggle">Question 2</button>
+            <div class="answer"><p>Answer 2</p></div>
+        </div>
+        <div class="faq">
+            <button class="btn question dropdown-toggle">Question 3</button>
+            <div class="answer"><p>Answer 3</p></div>
+        </div>
+    </div>
+    <div class="clear" style="height:24px;"></div>
+</div>
+-->
+<div class="section sponsor-wrapper">
+    <h2>Sponsors</h2>
+    <div class="sponsors">
+        <div class="first-row">
+           <a href="https://www.gatesfoundation.org/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/BMGF_Color_Logo_300_DPI.JPG"></a>
+        </div>
+        <div class="second-row">
+            <img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/KillingerFoundation_Logo_black.png">
+        </div>
+        <div class="third-row">
+            <a href="https://www.seattlefoundation.org/" target="_blank"><img style="width:32%" src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-11/seattle-foundation.png"></a>
+            <a href="https://waldronhr.com/" target="_blank"><img style="width:21%;margin:2% 4%;" src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-11/waldron.png"></a>
+            <a href="https://www.becu.org/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/BECU.png"></a>
+        </div>
+        <div class="fourth-row">
+            <a href="https://www.alaskaair.com/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/AlaskaAirlines.png"></a>
+            <a href="https://www.uber.com/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/Uber.png"></a>
+            <a href="http://www.nbcuniversal.com/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/Comcast_NBCUniversal.png"></a>
+            <div style="clear:both;"></div>
+        </div>
+        <div class="fifth-row">
+            <a href="https://bedroomsandmore.com/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-11/email-logo.png"></a>
+            <a href="https://www.fchn.com/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/FirstChoiceHealth.png"></a>
+            <a href="https://mohai.org/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/MOHAI.png"></a>
+            <a href="https://pse.com/Pages/default.aspx" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-10/PugetSoundEnergy.png"></a>
+            <a href="https://kcts9.org/" target="_blank"><img src="http://festival.crosscut.com/sites/default/files/styles/de2e/public/2017-11/logo-kcts.png"></a>
+            <div style="clear:both;"></div>
+        </div>
+    </div>
+</div>
+<div class="section blue">
+    <div class="center" style="padding-top:24px">
+        <h2 style="color:#fff;">Questions?</h2>
+        <div id="contact-form"></div>
+    </div>
 </div>
 <!--sched script needs to stay at bottom of page-->
-<script type="text/javascript" src="http://crosscutfestival2018a.sched.com/js/embed.js"></script>
+<!--0<script type="text/javascript" src="http://crosscutfestival2018a.sched.com/js/embed.js"></script>-->
